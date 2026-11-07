@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html, body { height: 100%; }
+body {
+  background: #F1F5F9;
+  color: #0F172A;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans Arabic", Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+html[dir="rtl"] body { font-family: "Segoe UI", Tahoma, "Noto Kufi Arabic", "Noto Sans Arabic", "Geeza Pro", Arial, sans-serif; }
+
+.scroll-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 6px; }
+.scroll-dark::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-dark::-webkit-scrollbar-thumb { background: #334155; border-radius: 6px; }
+
+.panel { @apply bg-white rounded-2xl border border-slate-200 shadow-sm; }
+.btn { @apply inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition active:scale-[.98] disabled:opacity-50 disabled:cursor-not-allowed; }
+.btn-primary { @apply btn bg-nama-teal text-white hover:bg-teal-700; }
+.btn-ghost { @apply btn bg-slate-100 text-slate-700 hover:bg-slate-200; }
+.btn-danger { @apply btn bg-rose-600 text-white hover:bg-rose-700; }
+.chip { @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold; }
+.mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; direction: ltr; unicode-bidi: plaintext; }
+.highlight-ring { animation: hl 1.2s ease-in-out 3; }
+@keyframes hl { 0%,100% { box-shadow: 0 0 0 0 rgba(217,119,6,0); } 50% { box-shadow: 0 0 0 4px rgba(217,119,6,.65); } }
+.flow-dash { stroke-dasharray: 6 6; animation: dash 1s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -12; } }
+.md strong { font-weight: 700; }
